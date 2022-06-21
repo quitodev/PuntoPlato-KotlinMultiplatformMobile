@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_menu"
+    app:startDestination="@id/menuPointsFragment">
+
+    <fragment
+        android:id="@+id/menuPointsFragment"
+        android:name="com.servirunplatomas.android.ui.points.PointsFragment"
+        android:label="fragment_points"
+        tools:layout="@layout/fragment_points" >
+        <action
+            android:id="@+id/action_menuPointsFragment_to_menuContactFragment"
+            app:destination="@id/menuContactFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_menuPointsFragment_to_menuHistoryFragment"
+            app:destination="@id/menuHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_menuPointsFragment_to_menuPointsDetailFragment"
+            app:destination="@id/menuPointsDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuContactFragment"
+        android:name="com.servirunplatomas.android.ui.contact.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/menuHistoryFragment"
+        android:name="com.servirunplatomas.android.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/menuPointsDetailFragment"
+        android:name="com.servirunplatomas.android.ui.points.PointsDetailFragment"
+        android:label="fragment_points_detail"
+        tools:layout="@layout/fragment_points_detail" />
+
+</navigation>
